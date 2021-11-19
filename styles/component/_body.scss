@@ -3,6 +3,7 @@ body {
   width: 100vw;
   background-color: $background-color;
   padding: 1.5rem;
+  overflow: scroll;
 }
 
 @media screen and (min-width: $tablet-breakpoint) {

@@ -1,13 +1,14 @@
+// need to sort out pushing to bottom when smaller number of tasks
 .footer {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   left: 0;
-  bottom: 0;
   background: $foreground-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
+  margin-top: 1.5rem;
 
   //   .footer__text {
   //   }

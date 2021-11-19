@@ -4,9 +4,11 @@
 @import "./styles/global/typography";
 
 //misc
-@import "./styles/body";
+@import "./styles/component/body";
 
 //block styles
-@import "./styles/button";
-@import "./styles/header";
-@import "./styles/footer";
+@import "./styles/component/button";
+@import "./styles/component/header";
+@import "./styles/component/footer";
+@import "./styles/component/main";
+@import "./styles/component/field";
