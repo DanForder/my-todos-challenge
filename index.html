@@ -11,9 +11,24 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3020ea995f.js"
+      crossorigin="anonymous"
+    ></script>
     <title>My Todos</title>
   </head>
   <body>
-    <h1>Hello there</h1>
+    <header class="header">
+      <h1 class="header__logo">MyTodos</h1>
+      <!-- header__reset is not used for styling -->
+      <button class="header__reset button">Reset</button>
+    </header>
+    <footer class="footer">
+      <!-- footer__text and footer__delete are not used for styling -->
+      <span class="footer__text">3 Tasks selected</span>
+      <button class="footer__delete button button--small">
+        Delete <i class="far fa-trash-alt"></i>
+      </button>
+    </footer>
   </body>
 </html>

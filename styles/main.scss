@@ -1,0 +1,19 @@
+//only body styles
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: $background-color;
+  padding: 1.5rem;
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  body {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  body {
+    padding: 3rem 8rem;
+  }
+}
