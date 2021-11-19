@@ -1,12 +1,12 @@
 // globals
-@import "./styles/variables";
-@import "./styles/reset";
-@import "./styles/typography";
+@import "./styles/global/variables";
+@import "./styles/global/reset";
+@import "./styles/global/typography";
 
-// misc
-@import "./styles/main.scss";
+//misc
+@import "./styles/body";
 
 //block styles
-@import "./styles/button.scss";
-@import "./styles/header.scss";
+@import "./styles/button";
+@import "./styles/header";
 @import "./styles/footer";
