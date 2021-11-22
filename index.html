@@ -17,7 +17,7 @@
   <header class="header">
     <h1 class="header__logo">MyTodos</h1>
     <!-- header__reset is not used for styling -->
-    <button class="header__reset button">Reset</button>
+    <button class="header__reset button" id="reset-button">Reset</button>
   </header>
   <main class="main">
     <p class="main__welcome">Welcome Back Jake!</span>
@@ -27,14 +27,14 @@
     </p>
 
     <div class="field">
-      <input class="field__input" type="text" placeholder="Add your task here..." />
+      <input class="field__input" id="task-input" type="text" placeholder="Add your task here..." />
       <i class="field__icon fas fa-plus-circle"></i>
     </div>
 
     <div class="tasks">
       <h2 class="tasks__heading">Tasks</h2>
-      <ul class="tasks__list">
-        <li class="tasks__item">
+      <ul class="tasks__list" id="task-list">
+        <!-- <li class="tasks__item">
           <input id="task-item-0" class="tasks__checkbox" type="checkbox" />
           <span class="tasks__check"></span>
           <label for="task-item-0" class="tasks__item-label">Do the weekly grocery shop</label>
@@ -57,9 +57,9 @@
           <span class="tasks__check"></span>
           <label for="task-item-3" class="tasks__item-label">Get my haircut</label>
           <i class="tasks__edit-icon fas fa-pen"></i>
-        </li>
+        </li> -->
       </ul>
-      <span class="tasks__complete-text">Tasks to complete: 4</span>
+      <span class="tasks__complete-text" id="complete-task-text">Tasks to complete: 4</span>
     </div>
   </main>
 
@@ -70,6 +70,8 @@
       Delete &nbsp; <i class="far fa-trash-alt"></i>
     </button>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 
 </html>
