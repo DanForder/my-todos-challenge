@@ -1,74 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/3020ea995f.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>My Todos</title>
-  </head>
-  <body>
-    <header class="header">
-      <h1 class="header__logo">MyTodos</h1>
-      <!-- header__reset is not used for styling -->
-      <button class="header__reset button">Reset</button>
-    </header>
-   <main class="main">
-      <p class="main__welcome">Welcome Back Jake!</span>
-      <p class="main__subtitle">
-        Let's enter the tasks we need to complete this upcoming week. Just use
-        the input below to create a todo.
-      </p>
-	  
-      <div class="field">
-        <input class="field__input" type="text" placeholder="Add your task here..." />
-        <i class="field__icon fas fa-plus-circle"></i>
-      </div>
 
-      <div class="tasks">
-        <h2 class="tasks__heading">Tasks</h2>
-        <ul class="tasks__list">
-          <li class="tasks__item">
-            <input type="checkbox" />
-            <span>Do the weekly grocery shop</span>
-            <i class="fas fa-pen"></i>
-          </li>
-          <li class="tasks__item">
-            <input type="checkbox" />
-            <span>Go to the gym</span>
-            <i class="fas fa-pen"></i>
-          </li>
-          <li class="tasks__item">
-            <input type="checkbox" />
-            <span>Be in bed by 22.30</span>
-            <i class="fas fa-pen"></i>
-          </li>
-		  <li class="tasks__item">
-            <input type="checkbox" />
-            <span>Do the weekly grocery shop</span>
-            <i class="fas fa-pen"></i>
-          </li>
-        </ul>
-        <span class="tasks__complete-text">Tasks to complete: 4</span>
-      </div>
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/3020ea995f.js" crossorigin="anonymous"></script>
+  <title>My Todos</title>
+</head>
 
-    <footer class="footer">
-      <!-- footer__text is not used for styling -->
-      <span class="footer__text">3 Tasks selected</span>
-      <button class="footer__delete button">
-        Delete &nbsp; <i class="far fa-trash-alt"></i>
-      </button>
-    </footer>
-  </body>
+<body>
+  <header class="header">
+    <h1 class="header__logo">MyTodos</h1>
+    <!-- header__reset is not used for styling -->
+    <button class="header__reset button">Reset</button>
+  </header>
+  <main class="main">
+    <p class="main__welcome">Welcome Back Jake!</span>
+    <p class="main__subtitle">
+      Let's enter the tasks we need to complete this upcoming week. Just use
+      the input below to create a todo.
+    </p>
+
+    <div class="field">
+      <input class="field__input" type="text" placeholder="Add your task here..." />
+      <i class="field__icon fas fa-plus-circle"></i>
+    </div>
+
+    <div class="tasks">
+      <h2 class="tasks__heading">Tasks</h2>
+      <ul class="tasks__list">
+        <li class="tasks__item">
+          <input id="task-item-0" class="tasks__checkbox" type="checkbox" />
+          <label for="task-item-0" class="tasks__item-label">Do the weekly grocery shop</label>
+          <i class="tasks__edit-icon fas fa-pen"></i>
+        </li>
+        <li class="tasks__item">
+          <input id="task-item-1" class="tasks__checkbox" type="checkbox" />
+          <label for="task-item-1" class="tasks__item-label">Go to the gym</label>
+          <i class="tasks__edit-icon fas fa-pen"></i>
+        </li>
+        <li class="tasks__item">
+          <input id="task-item-2" class="tasks__checkbox" type="checkbox" />
+          <label for="task-item-2" class="tasks__item-label">Be in bed by 22.30</label>
+          <i class="tasks__edit-icon fas fa-pen"></i>
+        </li>
+        <li class="tasks__item">
+          <input id="task-item-3" class="tasks__checkbox" type="checkbox" />
+          <label for="task-item-3" class="tasks__item-label">Do the weekly grocery shop</label>
+          <i class="tasks__edit-icon fas fa-pen"></i>
+        </li>
+      </ul>
+      <span class="tasks__complete-text">Tasks to complete: 4</span>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <!-- footer__text is not used for styling -->
+    <span class="footer__text">3 Tasks selected</span>
+    <button class="footer__delete button">
+      Delete &nbsp; <i class="far fa-trash-alt"></i>
+    </button>
+  </footer>
+</body>
+
 </html>
