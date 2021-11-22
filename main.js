@@ -4,28 +4,22 @@ const resetButton = document.getElementById("reset-button");
 const taskList = document.getElementById("task-list");
 const completeTaskText = document.getElementById("complete-task-text");
 const addTask = document.getElementById("add-task");
+const footer = document.getElementById("footer");
 
 // data
 const tasks = [
   "Do the weekly grocery shop",
   "Go to the gym",
   "Be in bed by 22.30",
-  "Get my haircut",
+  //   "Get my haircut",
 ];
 
-// functions
-const handleAddTask = () => {
-  const input = taskInput.value.trim();
-
-  if (isDuplicateTask(input) || input.length < 1) {
-    console.log("error adding new task");
-    return;
-  }
-
-  tasks.push(input);
+const updateHtml = () => {
   generateTaskList();
+  //TODO: show/hide footer
 };
 
+// functions
 const isDuplicateTask = (task) => {
   return tasks.indexOf(task) !== -1;
 };
@@ -53,8 +47,34 @@ const setTasksCompleteText = (numberOfTasks) => {
       : `Tasks to complete: ${numberOfTasks}`;
 };
 
+const handleAddTask = () => {
+  const input = taskInput.value.trim();
+
+  if (isDuplicateTask(input) || input.length < 1) {
+    console.log("error adding new task");
+    return;
+  }
+
+  tasks.push(input);
+  taskInput.value = "";
+  updateHtml();
+};
+
+const handleInputEnterKeyup = (event) => {
+  if (event.key === "Enter") {
+    handleAddTask();
+  }
+};
+
+const handleReset = () => {
+  tasks.length = [];
+  updateHtml();
+};
+
 //event listeners
 addTask.addEventListener("click", handleAddTask);
+taskInput.addEventListener("keyup", handleInputEnterKeyup);
+resetButton.addEventListener("click", handleReset);
 
 //initial logic
-generateTaskList();
+updateHtml();
