@@ -3,13 +3,32 @@ const taskInput = document.getElementById("task-input");
 const resetButton = document.getElementById("reset-button");
 const taskList = document.getElementById("task-list");
 const completeTaskText = document.getElementById("complete-task-text");
+const addTask = document.getElementById("add-task");
 
+// data
 const tasks = [
   "Do the weekly grocery shop",
   "Go to the gym",
   "Be in bed by 22.30",
   "Get my haircut",
 ];
+
+// functions
+const handleAddTask = () => {
+  const input = taskInput.value.trim();
+
+  if (isDuplicateTask(input) || input.length < 1) {
+    console.log("error adding new task");
+    return;
+  }
+
+  tasks.push(input);
+  generateTaskList();
+};
+
+const isDuplicateTask = (task) => {
+  return tasks.indexOf(task) !== -1;
+};
 
 const generateTaskList = () => {
   taskList.innerHTML = "";
@@ -34,4 +53,8 @@ const setTasksCompleteText = (numberOfTasks) => {
       : `Tasks to complete: ${numberOfTasks}`;
 };
 
+//event listeners
+addTask.addEventListener("click", handleAddTask);
+
+//initial logic
 generateTaskList();

@@ -103,7 +103,12 @@ body {
 .field .field__input::placeholder {
   color: #6c6a7c;
 }
-.field .field__icon {
+.field .field__add-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.field .field__add-button .field__icon {
   padding: 1rem 0;
   color: #e58181;
 }

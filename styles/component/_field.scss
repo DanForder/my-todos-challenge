@@ -20,9 +20,15 @@
     }
   }
 
-  .field__icon {
-    padding: 1rem 0;
+  .field__add-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 
-    color: $highlight-color;
+    .field__icon {
+      padding: 1rem 0;
+
+      color: $highlight-color;
+    }
   }
 }
