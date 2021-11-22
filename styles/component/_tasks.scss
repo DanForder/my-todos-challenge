@@ -12,7 +12,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1.5rem;
       padding: 1rem;
       margin: 2px 0;
       background-color: $foreground-color;
@@ -28,23 +27,24 @@
           background-color: $highlight-color;
         }
 
-        &:checked + .tasks__item-label::before {
+        &:checked + .tasks__check::before {
           content: "\2713";
           position: absolute;
-          left: -2.38rem;
-          top: 0.05rem;
+          left: -0.85rem;
+          top: -0.65rem;
         }
       }
-
+      .tasks__check {
+        position: relative;
+      }
       .tasks__item-label {
         text-align: left;
         flex: 1;
-        position: relative;
-      }
+        padding: 0 1.5rem;
 
-      button {
-        border: none;
-        background-color: unset;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
       }
 
       //   .tasks__edit-icon {

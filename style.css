@@ -121,7 +121,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
   padding: 1rem;
   margin: 2px 0;
   background-color: #2b2a33;
@@ -136,20 +135,22 @@ body {
 .tasks .tasks__list .tasks__item .tasks__checkbox:checked {
   background-color: #e58181;
 }
-.tasks .tasks__list .tasks__item .tasks__checkbox:checked + .tasks__item-label::before {
+.tasks .tasks__list .tasks__item .tasks__checkbox:checked + .tasks__check::before {
   content: "✓";
   position: absolute;
-  left: -2.38rem;
-  top: 0.05rem;
+  left: -0.85rem;
+  top: -0.65rem;
+}
+.tasks .tasks__list .tasks__item .tasks__check {
+  position: relative;
 }
 .tasks .tasks__list .tasks__item .tasks__item-label {
   text-align: left;
   flex: 1;
-  position: relative;
-}
-.tasks .tasks__list .tasks__item button {
-  border: none;
-  background-color: unset;
+  padding: 0 1.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .tasks .tasks__complete-text {
   color: #6c6a7c;
