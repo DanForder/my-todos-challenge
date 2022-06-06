@@ -2,7 +2,7 @@ const form = document.querySelector("#form");
 const todoInput = document.querySelector("#todo-input");
 const allTodoItems = document.querySelector("#all-todo-items");
 
-const todoList = ["adopt an owl"];
+const todoList = ["adopt an owl", "feed the ducks"];
 const emptyStateHTML =
   "<p>Either you've done everything already or there are still things to add to your list. Add a todo above!</p>";
 

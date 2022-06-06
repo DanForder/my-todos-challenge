@@ -29,9 +29,14 @@
         aria-label="Write a new todo item"
         placeholder="Add your task here..."
       />
-      <button class="text-field__button" type="submit">+</button>
+      <button
+        class="text-field__button"
+        type="submit"
+        aria-label="Submit new task"
+      >
+        <i class="fas fa-plus-circle" aria-hidden="true"></i>
+      </button>
     </form>
-
     <section id="all-todo-items"></section>
 
     <script src="main.js"></script>
