@@ -1,0 +1,32 @@
+@use "../mixins" as *;
+
+.list {
+  list-style: none;
+  margin: 1rem 0;
+
+  .list__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    @include border;
+
+    .list__input {
+      margin-left: 1rem;
+    }
+
+    .list__label {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .list__input:checked + .list__label {
+      text-decoration: line-through;
+    }
+
+    .list__delete {
+      margin-right: 1rem;
+      @include button-reset;
+    }
+  }
+}

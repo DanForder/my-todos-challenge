@@ -1,15 +1,3 @@
-// globals
-@import "./styles/global/variables";
-@import "./styles/global/reset";
-@import "./styles/global/typography";
-
-//misc
-@import "./styles/component/body";
-
-//block styles
-@import "./styles/component/button";
-@import "./styles/component/header";
-@import "./styles/component/footer";
-@import "./styles/component/main";
-@import "./styles/component/field";
-@import "./styles/component/tasks";
+@use "./styles/components/_components-dir";
+@use "./styles/layouts/_layouts-dir";
+@use "./styles/base/_base-dir";

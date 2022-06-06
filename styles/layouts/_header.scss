@@ -1,0 +1,13 @@
+@use "../mixins" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header__button {
+    padding: 0.5rem;
+    @include button-reset;
+    @include border;
+  }
+}

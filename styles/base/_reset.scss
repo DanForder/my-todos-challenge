@@ -1,6 +1,14 @@
+@use "../variables" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline-color: dodgerblue;
+}
+
 body {
   height: 100vh;
-  background-color: $background-color;
   padding: 1.5rem;
   overflow: scroll;
 }
