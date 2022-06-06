@@ -1,80 +1,55 @@
-// html element variables
-const taskInput = document.getElementById("task-input");
-const resetButton = document.getElementById("reset-button");
-const taskList = document.getElementById("task-list");
-const completeTaskText = document.getElementById("complete-task-text");
-const addTask = document.getElementById("add-task");
-const footer = document.getElementById("footer");
+const form = document.querySelector("#form");
+const todoInput = document.querySelector("#todo-input");
+const allTodoItems = document.querySelector("#all-todo-items");
 
-// data
-const tasks = [
-  "Do the weekly grocery shop",
-  "Go to the gym",
-  "Be in bed by 22.30",
-  //   "Get my haircut",
-];
+const todoList = ["adopt an owl"];
+const emptyStateHTML =
+  "<p>Either you've done everything already or there are still things to add to your list. Add a todo above!</p>";
 
-const updateHtml = () => {
-  generateTaskList();
-  //TODO: show/hide footer
+const onFormSubmit = (event) => {
+  // prevent reload of page
+  event.preventDefault();
+
+  // check input passes validation
+  const newTodo = todoInput.value.trim();
+  if (!newTodo || newTodo.length < 1) {
+    return alert("please enter a todo");
+  }
+
+  // add new item to the todo list
+  todoList.push(newTodo);
+
+  // reload todos on the page
+  recreateHTML();
+
+  // reset all form fields
+  event.target.reset();
 };
 
-// functions
-const isDuplicateTask = (task) => {
-  return tasks.indexOf(task) !== -1;
-};
-
-const generateTaskList = () => {
-  taskList.innerHTML = "";
-
-  tasks.forEach((task, index) => {
-    taskList.innerHTML += `
-  	<li class="tasks__item">
-  		<input id="task-item-${index}" class="tasks__checkbox" type="checkbox" value="${task.complete}"/>
-  		<span class="tasks__check"></span>
-  		<label for="task-item-${index}" class="tasks__item-label">${task}</label>
-  		<i class="tasks__edit-icon fas fa-pen"></i>
-  	</li>`;
-  });
-
-  setTasksCompleteText(tasks.length);
-};
-
-const setTasksCompleteText = (numberOfTasks) => {
-  completeTaskText.innerHTML =
-    tasks.length === 0
-      ? "All tasks have been completed. Great job!"
-      : `Tasks to complete: ${numberOfTasks}`;
-};
-
-const handleAddTask = () => {
-  const input = taskInput.value.trim();
-
-  if (isDuplicateTask(input) || input.length < 1) {
-    console.log("error adding new task");
+const recreateHTML = () => {
+  if (todoList.length < 1) {
+    allTodoItems.innerHTML = emptyStateHTML;
     return;
   }
 
-  tasks.push(input);
-  taskInput.value = "";
-  updateHtml();
+  const listItemsHTML = todoList
+    .map((item, index) => {
+      return `
+      <li class="list__item">
+        <input class="list__input" type="checkbox" id="todo-${index}" />
+        <label class="list__label" for="todo-${index}">${item}</label>
+      </li>
+      `;
+    })
+    .join("");
+  allTodoItems.innerHTML = `<ul class="list">${listItemsHTML}</ul>`;
 };
 
-const handleInputEnterKeyup = (event) => {
-  if (event.key === "Enter") {
-    handleAddTask();
-  }
+const clearInput = () => {
+  todoInput.value = null;
 };
 
-const handleReset = () => {
-  tasks.length = [];
-  updateHtml();
-};
-
-//event listeners
-addTask.addEventListener("click", handleAddTask);
-taskInput.addEventListener("keyup", handleInputEnterKeyup);
-resetButton.addEventListener("click", handleReset);
+form.addEventListener("submit", onFormSubmit);
 
 //initial logic
-updateHtml();
+recreateHTML();

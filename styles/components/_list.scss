@@ -1,0 +1,14 @@
+.list {
+  list-style: none;
+  margin: 1rem 0;
+
+  .list__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .list__input:checked + .list__label {
+      text-decoration: line-through;
+    }
+  }
+}

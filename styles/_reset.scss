@@ -1,8 +1,14 @@
-@use "../global/variables" as *;
+@use "./variables" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
   height: 100vh;
-  background-color: $background-color;
+  // background-color: $background-color;
   padding: 1.5rem;
   overflow: scroll;
 }

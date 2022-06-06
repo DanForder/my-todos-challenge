@@ -1,58 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3020ea995f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>My Todos</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/3020ea995f.js" crossorigin="anonymous"></script>
-  <title>My Todos</title>
-</head>
+  <body>
+    <h1>My Todos</h1>
 
-<body>
-  <header class="header">
-    <h1 class="header__logo">MyTodos</h1>
-    <!-- header__reset is not used for styling -->
-    <button class="header__reset button" id="reset-button">Reset</button>
-  </header>
-  <main class="main">
-    <p class="main__welcome">Welcome Back Jake!</span>
-    <p class="main__subtitle">
-      Let's enter the tasks we need to complete this upcoming week. Just use
-      the input below to create a todo.
-    </p>
+    <form id="form" class="text-field">
+      <input
+        class="text-field__input"
+        id="todo-input"
+        type="text"
+        aria-label="Write a new todo item"
+        placeholder="Add your task here..."
+      />
+      <button class="text-field__button" type="submit">+</button>
+    </form>
 
-    <div class="field">
-      <input class="field__input" id="task-input" type="text" placeholder="Add your task here..." />
-      <button class="field__add-button" id="add-task">
-        <i class="field__icon fas fa-plus-circle" id="add-task"></i>
-      </button>
-    </div>
+    <section id="all-todo-items"></section>
 
-    <div class="tasks">
-      <h2 class="tasks__heading">Tasks</h2>
-      <ul class="tasks__list" id="task-list">
-        <!-- List items are populated in main.js -->
-      </ul>
-      <span class="tasks__complete-text" id="complete-task-text">
-        <!-- Text is populated in main.js -->
-      </span>
-    </div>
-  </main>
-
-  <footer class="footer" id='footer'>
-    <!-- footer__text is not used for styling -->
-    <span class="footer__text">3 Tasks selected</span>
-    <button class="footer__delete button">
-      Delete &nbsp; <i class="far fa-trash-alt"></i>
-    </button>
-  </footer>
-
-  <script src="main.js"></script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>

@@ -1,12 +1,4 @@
-// globals
-@use "./styles/global/reset";
-@use "./styles/global/typography";
-
-//component styles
-@use "./styles/component/body";
-@use "./styles/component/button";
-@use "./styles/component/header";
-@use "./styles/component/footer";
-@use "./styles/component/field";
-@use "./styles/component/main";
-@use "./styles/component/tasks";
+@use "./styles/reset";
+@use "./styles/typography";
+@use "./styles/components/list";
+@use "./styles/components/text-field";
