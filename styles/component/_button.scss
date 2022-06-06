@@ -1,3 +1,5 @@
+@use "../global/variables" as *;
+
 .button {
   font-size: $regular-font-size;
   font-weight: bold;

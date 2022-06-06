@@ -1,3 +1,5 @@
+@use "../global/variables" as *;
+
 body {
   height: 100vh;
   background-color: $background-color;

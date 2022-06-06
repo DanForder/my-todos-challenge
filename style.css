@@ -73,17 +73,6 @@ body {
     padding: 0.75rem 2rem;
   }
 }
-.main {
-  margin-top: 4rem;
-}
-.main .main__welcome {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.main .main__subtitle {
-  color: #6c6a7c;
-}
-
 .field {
   border: #6c6a7c dashed 2px;
   border-radius: 5px;
@@ -100,6 +89,12 @@ body {
   border: none;
   flex: 1;
 }
+.field .field__input::-moz-placeholder {
+  color: #6c6a7c;
+}
+.field .field__input:-ms-input-placeholder {
+  color: #6c6a7c;
+}
 .field .field__input::placeholder {
   color: #6c6a7c;
 }
@@ -111,6 +106,17 @@ body {
 .field .field__add-button .field__icon {
   padding: 1rem 0;
   color: #e58181;
+}
+
+.main {
+  margin-top: 4rem;
+}
+.main .main__welcome {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.main .main__subtitle {
+  color: #6c6a7c;
 }
 
 .tasks .tasks__heading {
@@ -130,7 +136,9 @@ body {
   background-color: #2b2a33;
 }
 .tasks .tasks__list .tasks__item .tasks__checkbox {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   height: 1rem;
   width: 1rem;
   border-radius: 3px;
@@ -159,5 +167,3 @@ body {
 .tasks .tasks__complete-text {
   color: #6c6a7c;
 }
-
-/*# sourceMappingURL=style.css.map */

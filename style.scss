@@ -1,15 +1,12 @@
 // globals
-@import "./styles/global/variables";
-@import "./styles/global/reset";
-@import "./styles/global/typography";
+@use "./styles/global/reset";
+@use "./styles/global/typography";
 
-//misc
-@import "./styles/component/body";
-
-//block styles
-@import "./styles/component/button";
-@import "./styles/component/header";
-@import "./styles/component/footer";
-@import "./styles/component/main";
-@import "./styles/component/field";
-@import "./styles/component/tasks";
+//component styles
+@use "./styles/component/body";
+@use "./styles/component/button";
+@use "./styles/component/header";
+@use "./styles/component/footer";
+@use "./styles/component/field";
+@use "./styles/component/main";
+@use "./styles/component/tasks";

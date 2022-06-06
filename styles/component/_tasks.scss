@@ -1,3 +1,5 @@
+@use "../global/variables" as *;
+
 .tasks {
   .tasks__heading {
     font-size: $regular-font-size;

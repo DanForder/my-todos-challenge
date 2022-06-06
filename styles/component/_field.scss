@@ -1,3 +1,5 @@
+@use "../global/variables" as *;
+
 .field {
   border: $text-color-secondary dashed 2px;
   border-radius: 5px;
