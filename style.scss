@@ -1,5 +1,3 @@
-@use "./styles/reset";
-@use "./styles/typography";
-@use "./styles/components/list";
-@use "./styles/components/text-field";
-@use "./styles/components/header";
+@use "./styles/components/_components-dir";
+@use "./styles/layouts/_layouts-dir";
+@use "./styles/base/_base-dir";
