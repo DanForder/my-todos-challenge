@@ -23,5 +23,10 @@
     .list__input:checked + .list__label {
       text-decoration: line-through;
     }
+
+    .list__delete {
+      margin-right: 1rem;
+      @include button-reset;
+    }
   }
 }

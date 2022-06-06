@@ -7,7 +7,7 @@
 
   .header__button {
     padding: 0.5rem;
-    background-color: transparent;
+    @include button-reset;
     @include border;
   }
 }

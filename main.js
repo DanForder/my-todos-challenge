@@ -39,18 +39,29 @@ const onFormSubmit = (event) => {
   event.target.reset();
 };
 
-// maps all current task checkboxes to the corresponding task in the array
-const mapTaskCheckboxes = () => {
-  const todoCheckboxes = document.querySelectorAll(".list__input");
-  todoCheckboxes.forEach((checkbox, index) => {
-    checkbox.addEventListener("change", () => checkTodo(index));
-  });
-};
-
 // toggles the checked state of a task based on its index in the array
 const checkTodo = (index) => {
   todoList[index].checked = !todoList[index].checked;
   recreateHTML();
+};
+
+// deletes a task based on its index in the array
+const deleteTodo = (index) => {
+  todoList.splice(index, 1);
+  recreateHTML();
+};
+
+// maps all current task checkboxes to the corresponding task in the array
+const mapTaskCheckboxes = () => {
+  const todoCheckboxes = document.querySelectorAll(".list__input");
+  const todoDeleteButtons = document.querySelectorAll(".list__delete");
+
+  todoCheckboxes.forEach((checkbox, index) => {
+    checkbox.addEventListener("change", () => checkTodo(index));
+  });
+  todoDeleteButtons.forEach((deleteButton, index) => {
+    deleteButton.addEventListener("click", () => deleteTodo(index));
+  });
 };
 
 // returns HTML for a list of inputs based on an array of tasks
@@ -62,6 +73,9 @@ const createListItemsHTML = (list) => {
         checked && "checked"
       } />
         <label class="list__label" for="todo-${index}">${content}</label>
+        <button class="list__delete" aria-label="Delete todo item">
+          <i class="far fa-trash-alt" aria-hidden="true"></i>
+        </button>
       </li>`;
     })
     .join("");

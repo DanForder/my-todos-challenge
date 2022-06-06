@@ -20,6 +20,12 @@
 .list .list__item .list__input:checked + .list__label {
   text-decoration: line-through;
 }
+.list .list__item .list__delete {
+  margin-right: 1rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+}
 
 .text-field {
   margin: 1rem 0;
@@ -38,6 +44,7 @@
   padding: 0.5rem;
   border: none;
   background-color: transparent;
+  font-size: 1rem;
 }
 
 .header {
@@ -47,7 +54,9 @@
 }
 .header .header__button {
   padding: 0.5rem;
+  border: none;
   background-color: transparent;
+  font-size: 1rem;
   border: 2px solid black;
   border-radius: 0.5rem;
 }
