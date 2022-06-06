@@ -6,10 +6,10 @@ const resetButton = document.querySelector("#reset-button");
 
 // global variables
 const todoList = [
-  { content: "adopt an owl", checked: false },
-  { content: "feed the ducks", checked: false },
-  { content: "pet a doggo", checked: false },
-  { content: "go to class", checked: false },
+  // { content: "adopt an owl", checked: false },
+  // { content: "feed the ducks", checked: false },
+  // { content: "pet a doggo", checked: false },
+  // { content: "go to class", checked: false },
 ];
 const emptyStateHTML =
   "<p>Nothing to see here yet... Add a task in the field above! ☝️</p>";
@@ -51,8 +51,8 @@ const deleteTodo = (index) => {
   recreateHTML();
 };
 
-// maps all current task checkboxes to the corresponding task in the array
-const mapTaskCheckboxes = () => {
+// maps all current task elements to the corresponding task in the array
+const mapTaskElements = () => {
   const todoCheckboxes = document.querySelectorAll(".list__input");
   const todoDeleteButtons = document.querySelectorAll(".list__delete");
 
@@ -93,7 +93,7 @@ const recreateHTML = () => {
   allTodoItems.innerHTML = `<ul class="list">${listItemsHTML}</ul>`;
 
   // map to do checkboxes to the correct item in array
-  mapTaskCheckboxes();
+  mapTaskElements();
 };
 
 // event listeners
