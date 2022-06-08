@@ -5,12 +5,7 @@ const allTodoItems = document.querySelector("#all-todo-items");
 const resetButton = document.querySelector("#reset-button");
 
 // global variables
-const todoList = [
-  // { content: "adopt an owl", checked: false },
-  // { content: "feed the ducks", checked: false },
-  // { content: "pet a doggo", checked: false },
-  // { content: "go to class", checked: false },
-];
+const todoList = [];
 const emptyStateHTML =
   "<p>Nothing to see here yet... Add a task in the field above! ☝️</p>";
 
