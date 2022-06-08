@@ -95,5 +95,5 @@ const recreateHTML = () => {
 form.addEventListener("submit", onFormSubmit);
 resetButton.addEventListener("click", resetPage);
 
-//initial logic
-recreateHTML();
+//initial on load logic
+document.addEventListener("DOMContentLoaded", recreateHTML);
