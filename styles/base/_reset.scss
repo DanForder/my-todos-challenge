@@ -4,23 +4,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  outline-color: dodgerblue;
+  outline-color: $color-highlight;
 }
 
 body {
   height: 100vh;
   padding: 1.5rem;
   overflow: scroll;
-}
-
-@media screen and (min-width: $tablet-breakpoint) {
-  body {
-    padding: 2rem;
-  }
-}
-
-@media screen and (min-width: $desktop-breakpoint) {
-  body {
-    padding: 3rem 8rem;
-  }
+  background-color: $color-background;
 }

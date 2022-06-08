@@ -1,5 +1,7 @@
+@use "./variables" as *;
+
 @mixin border() {
-  border: 2px solid black;
+  border: 2px solid $color-foreground;
   border-radius: 0.5rem;
 }
 

@@ -1,3 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline-color: dodgerblue;
+}
+
+body {
+  height: 100vh;
+  padding: 1.5rem;
+  overflow: scroll;
+  background-color: white;
+}
+
+* {
+  font-family: "Jost", sans-serif;
+  color: black;
+}
+
 .list {
   list-style: none;
   margin: 1rem 0;
@@ -59,31 +78,4 @@
   font-size: 1rem;
   border: 2px solid black;
   border-radius: 0.5rem;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  outline-color: dodgerblue;
-}
-
-body {
-  height: 100vh;
-  padding: 1.5rem;
-  overflow: scroll;
-}
-
-@media screen and (min-width: 768px) {
-  body {
-    padding: 2rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body {
-    padding: 3rem 8rem;
-  }
-}
-* {
-  font-family: "Jost", sans-serif;
 }

@@ -1,3 +1,6 @@
+@use "../variables" as *;
+
 * {
   font-family: "Jost", sans-serif;
+  color: $color-foreground;
 }
